@@ -1,10 +1,5 @@
 (() => {
     "use strict";
-    Fancybox.bind();
-    const inputMasks = document.querySelectorAll(".input-tell");
-    if (inputMasks.length > 0) Inputmask({
-        mask: "+7 (999) 999-9999"
-    }).mask(inputMasks);
     const header = document.querySelector(".header");
     const headerHeight = header.offsetHeight;
     const menuLinks = document.querySelectorAll(".menu__link");

@@ -8,6 +8,15 @@
 	<link rel="stylesheet" href="css/libs/fancybox.min.css">
 	<link rel="stylesheet" href="css/libs/swiper.min.css">
 	<link rel="stylesheet" href="css/style.min.css">
+
+	<!-- Preload для важных ресурсов -->
+	<link rel="preload" href="js/libs/swiper.min.js" as="script">
+	<link rel="preload" href="js/app.js" as="script">
+	
+	<!-- Prefetch для менее критичных библиотек -->
+	<link rel="prefetch" href="js/libs/inputmask.min.js">
+	<link rel="prefetch" href="js/libs/fancybox.min.js">
+
 	<link rel="shortcut icon" href="favicon.ico">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -61,7 +70,10 @@
 				<div class="mainblock__container">
 					<div class="mainblock__inner">
 						<div class="mainblock__bg">
-							<img src="img/main-bg.jpg" alt="">
+							<picture>
+								<source srcset="img/main-bg.webp" type="image/webp">
+								<img src="img/main-bg.jpg" alt="">
+							</picture>
 						</div>
 						<div class="mainblock__content">
 							<div class="mainblock__subsubtitle">
@@ -160,25 +172,37 @@
 								<div class="quotes__swiper-tumbs swiper-wrapper">
 									<div class="quotes__slide-tumbs quotes-tumbs-slide swiper-slide">
 										<div class="quotes-tumbs-slide__image">
-											<img src="img/quotes/tumbs-1.jpg" alt="Стив Джобс">
+											<picture>
+												<source srcset="img/quotes/tumbs-1.webp" type="image/webp">
+												<img src="img/quotes/tumbs-1.jpg" alt="Стив Джобс">
+											</picture>
 										</div>
 										<p class="quotes-tumbs-slide__name">Стив Джобс</p>
 									</div>
 									<div class="quotes__slide-tumbs quotes-tumbs-slide swiper-slide">
 										<div class="quotes-tumbs-slide__image">
-											<img src="img/quotes/tumbs-2.jpg" alt="Дэвид Рокфеллер">
+											<picture>
+												<source srcset="img/quotes/tumbs-2.webp" type="image/webp">
+												<img src="img/quotes/tumbs-2.jpg" alt="Дэвид Рокфеллер">
+											</picture>
 										</div>
 										<p class="quotes-tumbs-slide__name">Дэвид Рокфеллер</p>
 									</div>
 									<div class="quotes__slide-tumbs quotes-tumbs-slide swiper-slide">
 										<div class="quotes-tumbs-slide__image">
-											<img src="img/quotes/tumbs-3.jpg" alt="Питер Друкер">
+											<picture>
+												<source srcset="img/quotes/tumbs-3.webp" type="image/webp">
+												<img src="img/quotes/tumbs-3.jpg" alt="Питер Друкер">
+											</picture>
 										</div>
 										<p class="quotes-tumbs-slide__name">Питер Друкер</p>
 									</div>
 									<div class="quotes__slide-tumbs quotes-tumbs-slide swiper-slide">
 										<div class="quotes-tumbs-slide__image">
-											<img src="img/quotes/tumbs-4.jpg" alt="Уоррен Баффетт">
+											<picture>
+												<source srcset="img/quotes/tumbs-4.webp" type="image/webp">
+												<img src="img/quotes/tumbs-4.jpg" alt="Уоррен Баффетт">
+											</picture>
 										</div>
 										<p class="quotes-tumbs-slide__name">Уоррен Баффетт</p>
 									</div>
@@ -236,7 +260,10 @@
 								<div class="quotes__slide slide-quotes swiper-slide">
 									<div
 										class="slide-quotes__image-bg image-animate _anim-items _anim-no-hide">
-										<img src="img/quotes/tumbs-1.jpg" alt="Стив Джобс">
+										<picture>
+											<source srcset="img/quotes/tumbs-1.webp" type="image/webp">
+											<img src="img/quotes/tumbs-1.jpg" alt="Стив Джобс">
+										</picture>
 									</div>
 									<div class="slide-quotes__content">
 										<p class="slide-quotes__text">«Когда мне не хватало денег, я
@@ -249,7 +276,10 @@
 								</div>
 								<div class="quotes__slide slide-quotes swiper-slide">
 									<div class="slide-quotes__image-bg">
-										<img src="img/quotes/tumbs-2.jpg" alt="Стив Джобс">
+										<picture>
+											<source srcset="img/quotes/tumbs-2.webp" type="image/webp">
+											<img src="img/quotes/tumbs-2.jpg" alt="Дэвид Рокфеллер">
+										</picture>
 									</div>
 									<div class="slide-quotes__content">
 										<p class="slide-quotes__text">«Когда мне не хватало денег, я
@@ -262,7 +292,10 @@
 								</div>
 								<div class="quotes__slide slide-quotes swiper-slide">
 									<div class="slide-quotes__image-bg">
-										<img src="img/quotes/tumbs-3.jpg" alt="Стив Джобс">
+										<picture>
+											<source srcset="img/quotes/tumbs-3.webp" type="image/webp">
+											<img src="img/quotes/tumbs-3.jpg" alt="Питер Друкер">
+										</picture>
 									</div>
 									<div class="slide-quotes__content">
 										<p class="slide-quotes__text">«Когда мне не хватало денег, я
@@ -275,7 +308,10 @@
 								</div>
 								<div class="quotes__slide slide-quotes swiper-slide">
 									<div class="slide-quotes__image-bg">
-										<img src="img/quotes/tumbs-4.jpg" alt="Стив Джобс">
+										<picture>
+											<source srcset="img/quotes/tumbs-4.webp" type="image/webp">
+											<img src="img/quotes/tumbs-4.jpg" alt="Уоррен Баффетт">
+										</picture>
 									</div>
 									<div class="slide-quotes__content">
 										<p class="slide-quotes__text">«Когда мне не хватало денег, я
@@ -387,13 +423,21 @@
 							<div class="who-we__cards">
 								<div class="who-we__person-info person-info-who _anim-items _anim-no-hide">
 									<div class="person-info-who__image">
-										<img src="img/who-we/Ilya-Molchanov.jpg" alt="Ilya Molchanov">
+										<picture>
+											<source srcset="img/who-we/Ilya-Molchanov.webp"
+												type="image/webp">
+											<img src="img/who-we/Ilya-Molchanov.jpg" alt="Ilya Molchanov">
+										</picture>
 									</div>
 									<p class="person-info-who__name">Илья Молчанов</p>
 								</div>
 								<div class="who-we__person-info person-info-who _anim-items _anim-no-hide">
 									<div class="person-info-who__image">
-										<img src="img/who-we/Dmitry-Shtompel.jpg" alt="Dmitry Shtompel">
+										<picture>
+											<source srcset="img/who-we/Dmitry-Shtompel.webp"
+												type="image/webp">
+											<img src="img/who-we/Dmitry-Shtompel.jpg" alt="Dmitry Shtompel">
+										</picture>
 									</div>
 									<p class="person-info-who__name">Дмитрий Штомпель</p>
 								</div>
@@ -779,10 +823,9 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/libs/inputmask.min.js"></script>
-	<script src="js/libs/fancybox.min.js"></script>
-	<script src="js/libs/swiper.min.js"></script>
-	<script src="js/app.js"></script>
+	<script src="js/libs/swiper.min.js" defer></script>
+	<script src="js/app.js" defer></script>
+	<script src="js/lazy-load.js"></script>
 </body>
 
 </html>
